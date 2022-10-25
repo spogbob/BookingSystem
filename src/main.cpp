@@ -4,9 +4,11 @@
 #include "../include/Database.h"
 
 int main(int argc, char* argv[]) {
-    Database db("../booking.db");
+    // Initialize the database
+    Database db("booking.db");
 
     db.CheckTable("users");
 
     db.Close();
+    system("pause");
 }

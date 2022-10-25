@@ -6,7 +6,7 @@
 #include "../include/Database.h"
 
 Database::Database(const char *bdName) {
-    rc = sqlite3_open(bdName, &db);
+    rc = sqlite3_open(bdName, &db); // Opens the database
 
     if( rc ) {
         fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
@@ -16,7 +16,7 @@ Database::Database(const char *bdName) {
 }
 
 void Database::Close() {
-    sqlite3_close(db);
+    sqlite3_close(db);  // Closes the database
     fprintf(stderr, "Closed database\n");
 }
 

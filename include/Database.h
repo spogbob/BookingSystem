@@ -31,10 +31,13 @@ private:
     }
 public:
 
+    // Opens the database of filename bdName on init
     explicit Database(const char *bdName);
 
+    // Closes the current database
     void Close();
 
+    // Prints table tableName from the current database
     void CheckTable(const char *tableName);
 
 };
